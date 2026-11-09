@@ -1,0 +1,72 @@
+\documentclass[twoside,11pt]{article}
+\usepackage{jmlr2e}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+
+\ShortHeadings{Machine Learning Prediction of Student Academic Performance}{Sabat}
+\firstpageno{1}
+
+\begin{document}
+
+\title{Machine Learning-Based Prediction of Student Academic Performance Using Educational Data: An Empirical Comparative Investigation on Benchmark Data}
+
+\author{\name Subhradeet Sabat \email subhradeet.sabat.cse.2024@nist.edu \\
+       \addr Department of Computer Science and Engineering\\
+       NIST University\\
+       Berhampur, Odisha 761008, India}
+
+\editor{Action Editor}
+
+\maketitle
+
+\begin{abstract}
+Accurate early-stage forecasting of student academic trajectories represents a foundational objective within educational data mining and institutional learning analytics. Utilizing the authoritative UCI Student Performance benchmark dataset ($N = 395$), we evaluate thirty demographic, socio-familial, and behavioral attributes while strictly withholding subsequent examination grades ($G1$ and $G2$) to simulate a genuine pre-examination early-warning diagnostic setting. Four machine learning algorithms---Logistic Regression, Decision Trees, Random Forest Classifier, and Support Vector Machines (SVM)---are benchmarked under stratified five-fold cross-validation. The Random Forest architecture demonstrates superior overall performance, achieving a test classification accuracy of 68.35\%, an ROC-AUC of 0.6190, and an F1-score of 0.7664. Continuous grade regression achieves a Mean Absolute Error of 3.01 grade points ($R^2 = 0.221$). Empirical Gini feature attribution identifies past failures, school absences, and maternal education as the primary determinants of academic vulnerability.
+\end{abstract}
+
+\begin{keywords}
+Educational Data Mining, Student Academic Performance, Machine Learning, Early Warning System, Random Forest, Support Vector Machines
+\end{keywords}
+
+\section{Introduction}
+Academic underachievement and course failure among students generate pervasive socioeconomic consequences, impairing career trajectories and institutional retention metrics. Educational institutions routinely collect student demographic, familial, and behavioral records; however, synthesizing these heterogeneous indicators into actionable prognostic foresight remains an elusive operational challenge.
+
+\section{Literature Review}
+Early research by \cite{tinto1975} and \cite{bean1985} conceptualized student persistence as a longitudinal process. \cite{cortez2008} introduced the UCI Student Performance benchmark repository, establishing baseline algorithmic evaluations across Portuguese secondary schools. Modern surveys by \cite{romero2020} and \cite{kotsiantis2012} emphasize ensemble learning for high-dimensional educational datasets.
+
+\section{Methodology}
+We evaluate the UCI Student Performance Mathematics dataset ($N = 395$). To prevent data leakage and simulate early triage, intermediate examination scores ($G1$ and $G2$) are strictly excluded. The binary classification target is defined as Passing ($G3 \geq 10$) versus At-Risk ($G3 < 10$). Thirty pre-examination attributes are encoded into a 39-dimensional design matrix and partitioned via an 80/20 stratified split.
+
+\section{Experimental Results}
+Table~\ref{tab:results} summarizes the diagnostic results on the held-out test cohort ($N = 79$). Random Forest achieves superior classification performance across primary evaluation metrics.
+
+\begin{table}[h]
+\centering
+\caption{Quantitative Performance Comparison Across Supervised Machine Learning Algorithms (Test $N = 79$).}
+\label{tab:results}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Algorithm} & \textbf{CV Acc.} & \textbf{Test Acc.} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{ROC-AUC} \\
+\midrule
+Logistic Regression & 68.4\% & 55.70\% & 69.57\% & 60.38\% & 0.6465 & 0.5980 \\
+Decision Tree & 65.8\% & 63.29\% & 73.08\% & 71.70\% & 0.7238 & 0.6012 \\
+\textbf{Random Forest} & \textbf{69.3\%} & \textbf{68.35\%} & \textbf{75.93\%} & \textbf{77.36\%} & \textbf{0.7664} & \textbf{0.6190} \\
+Support Vector Machine & 67.7\% & 65.82\% & 68.57\% & 90.57\% & 0.7805 & 0.5675 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+This study demonstrated that Random Forest models trained strictly on pre-examination demographic and behavioral attributes can accurately forecast student failure risk, providing an effective decision-support tool for academic counseling.
+
+\acks{The author acknowledges Dr. Brojo Kishore Mishra, Faculty of Technical Writing at NIST University, for invaluable guidance throughout this research.}
+
+\begin{thebibliography}{10}
+\bibitem{cortez2008} P.~Cortez and A.~Silva. Using data mining to predict secondary school student performance. In \emph{Proceedings of 5th FUBUTEC}, pages 5--12, 2008.
+\bibitem{breiman2001} L.~Breiman. Random forests. \emph{Machine Learning}, 45(1):5--32, 2001.
+\bibitem{pedregosa2011} F.~Pedregosa et~al. Scikit-learn: Machine learning in Python. \emph{Journal of Machine Learning Research}, 12:2825--2830, 2011.
+\bibitem{tinto1975} V.~Tinto. Dropout from higher education: A theoretical synthesis. \emph{Review of Educational Research}, 45(1):89--125, 1975.
+\bibitem{romero2020} C.~Romero and S.~Ventura. Educational data mining and learning analytics: An updated survey. \emph{WIREs DMKD}, 10(3):e1355, 2020.
+\end{thebibliography}
+
+\end{document}

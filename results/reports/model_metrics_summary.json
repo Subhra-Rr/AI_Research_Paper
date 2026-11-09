@@ -1,0 +1,98 @@
+{
+    "Logistic Regression": {
+        "Train_Accuracy": 0.7658227848101266,
+        "CV_Mean_Accuracy": 0.6837301587301589,
+        "CV_Std_Accuracy": 0.03412698412698411,
+        "Test_Accuracy": 0.5569620253164557,
+        "Balanced_Accuracy": 0.532656023222061,
+        "Precision": 0.6956521739130435,
+        "Sensitivity_Recall": 0.6037735849056604,
+        "Specificity": 0.46153846153846156,
+        "F1_Score": 0.6464646464646465,
+        "ROC_AUC": 0.5979680696661829,
+        "PR_AUC": 0.7573742275666466,
+        "Brier_Score": 0.27898077575631697,
+        "Confusion_Matrix": [
+            [
+                12,
+                14
+            ],
+            [
+                21,
+                32
+            ]
+        ]
+    },
+    "Decision Tree": {
+        "Train_Accuracy": 0.7658227848101266,
+        "CV_Mean_Accuracy": 0.6580853174603175,
+        "CV_Std_Accuracy": 0.048569487362650814,
+        "Test_Accuracy": 0.6329113924050633,
+        "Balanced_Accuracy": 0.5892597968069666,
+        "Precision": 0.7307692307692307,
+        "Sensitivity_Recall": 0.7169811320754716,
+        "Specificity": 0.46153846153846156,
+        "F1_Score": 0.7238095238095238,
+        "ROC_AUC": 0.6012336719883891,
+        "PR_AUC": 0.7586458400675433,
+        "Brier_Score": 0.24407372681108958,
+        "Confusion_Matrix": [
+            [
+                12,
+                14
+            ],
+            [
+                15,
+                38
+            ]
+        ]
+    },
+    "Random Forest": {
+        "Train_Accuracy": 0.8734177215189873,
+        "CV_Mean_Accuracy": 0.6930555555555555,
+        "CV_Std_Accuracy": 0.052598454156872476,
+        "Test_Accuracy": 0.6835443037974683,
+        "Balanced_Accuracy": 0.6367924528301887,
+        "Precision": 0.7592592592592593,
+        "Sensitivity_Recall": 0.7735849056603774,
+        "Specificity": 0.5,
+        "F1_Score": 0.7663551401869159,
+        "ROC_AUC": 0.6190130624092888,
+        "PR_AUC": 0.7537485832980862,
+        "Brier_Score": 0.22449492344695376,
+        "Confusion_Matrix": [
+            [
+                13,
+                13
+            ],
+            [
+                12,
+                41
+            ]
+        ]
+    },
+    "Support Vector Machine": {
+        "Train_Accuracy": 0.8734177215189873,
+        "CV_Mean_Accuracy": 0.6771825396825397,
+        "CV_Std_Accuracy": 0.021911805860759567,
+        "Test_Accuracy": 0.6582278481012658,
+        "Balanced_Accuracy": 0.5297532656023223,
+        "Precision": 0.6857142857142857,
+        "Sensitivity_Recall": 0.9056603773584906,
+        "Specificity": 0.15384615384615385,
+        "F1_Score": 0.7804878048780488,
+        "ROC_AUC": 0.5674891146589259,
+        "PR_AUC": 0.7537593298362988,
+        "Brier_Score": 0.2212041451568032,
+        "Confusion_Matrix": [
+            [
+                4,
+                22
+            ],
+            [
+                5,
+                48
+            ]
+        ]
+    }
+}
