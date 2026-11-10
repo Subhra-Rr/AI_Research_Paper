@@ -1,12 +1,12 @@
 REPRODUCIBILITY AND SYSTEM VERIFICATION AUDIT
 ===========================================================================
-Execution Date/Time   : 2026-11-10 19:21:59
+Execution Date/Time   : 2026-11-10 19:53:06
 Operating System      : Windows 11 (Build 10.0.26300)
 Processor Architecture: AMD64 - Intel64 Family 6 Model 186 Stepping 3, GenuineIntel
 Python Environment    : Python 3.14.7
-Scikit-Learn Version  : 3.10.8
-Pandas Version        : 2.3.3
-NumPy Version         : 2.3.5
+Scikit-Learn Version  : 3.11.2
+Pandas Version        : 3.1.1
+NumPy Version         : 2.5.4
 Random Seed Specified : 42 (Enforced across split, models, and CV)
 Dataset Verified Source: UCI Machine Learning Repository (Cortez & Silva, 2008)
 Dataset File Path     : D:\AI_Research_Paper\dataset\student-mat.csv
